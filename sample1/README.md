@@ -92,10 +92,11 @@ http://localhost/member/name.php?bar=%E5%A4%A7
 
 リクエスト例をもう一つ作っておく。
 
-## 実装
+## 実装（ここから先は採用試験では提供されない）
 
 1. データベースの作成
 1. テーブルの作成
+1. all.phpの作成，テスト
 1. id.phpの作成，テスト
 1. name.phpの作成，テスト
 
@@ -103,14 +104,7 @@ http://localhost/member/name.php?bar=%E5%A4%A7
 
 http://localhost/phpmyadmin/ で「SQL」をクリックして`sample1.sql`を実行する。（GUIで作業することもできるが，このようにSQLのコードを書いた方がいろいろ便利。）
 
-データを入力する。
-
-```
-insert into members (id, name) values (1, '岩瀬');
-insert into members (id, name) values (2, '岩橋');
-insert into members (id, name) values (3, '大木');
-insert into members (id, name) values (4, '小山');
-```
+membersの「挿入」をクリックし，データを入力する。
 
 ##### 課題
 

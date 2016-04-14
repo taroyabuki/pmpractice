@@ -14,8 +14,10 @@
 
 ## XAMPPのインストール
 
+1. （ファイルの拡張子を表示するようにしておく。）
+1. （signature無しのUTF-8で保存できるテキストエディタを用意する。）
 1. Apache（ウェブサーバ）とMySQL（データベースサーバ），PHP（サーバ言語），phpMyAdmin（データベース操作ツール）を入れる。
-1. XAMPP Control PanelでApacheとMySQLを起動する。
+1. XAMPP Control PanelでApacheとMySQLを起動する。（うまく行かない場合，Control PanelのNetstatでポート80を使っているプログラムを確認する。Skypeは完全に終了させる。）
 1. http://localhost/ にアクセスしてApacheの動作を確認する。
 
 HTMLファイルは簡単なものをテキストエディタで作ればよい。
@@ -26,12 +28,13 @@ HTMLファイルは簡単なものをテキストエディタで作ればよい�
 
 以下の項目がすべて終わったら退室してもよい。
 
+1. GUIでデータを追加したときに実行されたSQL文は何か。ヒント：`INSERT`から始まる。
 1. GUIでデータを確認したときに実行されたSQL文は何か。ヒント：`SELECT`から始まる。
-1. GUIでデータを追加したときに実行されたSQL文は何か。ヒント：`UPDATE`から始まる。
+1. http://localhost/member/all.php
 1. http://localhost/member/id.php?foo=2
 1. 自分で作ったURLによる`id.php`の動作確認
 1. http://localhost/member/name.php?bar=%E5%A4%A7
-1. 自分で作ったURLによる`id.php`の動作確認
+1. 自分で作ったURLによる`name.php`の動作確認
 1. （オプショナル）http://localhost/member/search.php?id=1
 1. （オプショナル）http://localhost/member/search.php?name=%E5%A4%A7
 1. （オプショナル）http://localhost/member/search.php?id=1&name=%E5%A4%A7
