@@ -7,7 +7,7 @@
 1. HTMLファイルをウェブサーバ経由で閲覧する。（ファイルを`c:/xampp/htdocs`に置いて，http://localhost/ファイル名 にアクセスする。）
 1. sample1 （名簿の検索API。某企業の採用試験の練習問題）
 1. sample2 （名簿の更新UI）
-1. JDKとNetBeansをインストールする。
+1. （オプショナル）JDKとNetBeansをインストールする。（開発にはNetBeansが便利。この資料はすべてAtomで書いているのだが）
 1. sample3 （研究室名簿）
 1. sample4 （Twitterもどき）
 

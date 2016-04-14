@@ -38,6 +38,8 @@ http://localhost/member/all.php
 4 小山
 ```
 
+（余裕のある人向け）結果を表形式で表示する。http://localhost/member/all2.php （`all.php`と比較してみよ。）
+
 #### <a name="no2">No.2 GET /member/name.php
 
 ##### 概要
@@ -122,12 +124,12 @@ http://localhost/member/name.php?bar=%E5%A4%A7
 
 #### 作業3
 
-テーブルを設計する
+テーブルを設計する。
 
 |名前|型|その他|
 |:---|:----------|:-----|
 |id  |整数 int|主キー|
-|name|50文字までの文字列 varchar(50)||
+|name|50文字までの文字列 varchar(50)|-|
 
 idやnameは勝手に付けた名前。
 
