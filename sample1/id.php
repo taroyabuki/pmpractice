@@ -10,11 +10,7 @@ $dbPass = 'pass';
 $db = new PDO($dsn, $dbUser, $dbPass);
 
 //クエリパラメータの取得
-if (isset($_GET['foo'])) {
-  $id = $_GET['foo'];
-} else {
-  die();//簡単のため
-}
+$id = $_GET['foo'];//手抜き
 
 //検索実行
 $sql = 'SELECT * FROM members WHERE id = :id';
@@ -27,6 +23,6 @@ $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 foreach ($result as $person) {
   echo $person['id'];
   echo ' ';
-  echo $person['name'];
+  echo $person['name'];//手抜き
   echo "<br/>";
 }

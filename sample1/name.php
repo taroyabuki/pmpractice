@@ -10,16 +10,12 @@ $dbPass = 'pass';
 $db = new PDO($dsn, $dbUser, $dbPass);
 
 //クエリパラメータの取得
-if (isset($_GET['bar'])) {
-  $id = $_GET['bar'];
-} else {
-  die();//簡単のため
-}
+$name = $_GET['bar'];//手抜き
 
 //検索実行
 $sql = 'SELECT * FROM members WHERE name LIKE :name';
 $prepare = $db->prepare($sql);
-$prepare->bindValue(':name', '%'.$id.'%', PDO::PARAM_INT);
+$prepare->bindValue(':name', '%'.$name.'%', PDO::PARAM_STR);
 $prepare->execute();
 $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
@@ -27,6 +23,6 @@ $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 foreach ($result as $person) {
   echo $person['id'];
   echo ' ';
-  echo $person['name'];
+  echo $person['name'];//手抜き
   echo "<br/>";
 }
