@@ -10,17 +10,16 @@
 1. JDKとNetBeansをインストールする。
 1. sample3 （研究室名簿）
 1. sample4 （Twitterもどき）
-1. sample5 （書誌情報管理）
 
 ## XAMPPのインストール
 
 1. Apache（ウェブサーバ）とMySQL（データベースサーバ），PHP（サーバ言語），phpMyAdmin（データベース操作ツール）を入れる。
-1. XAMPP Control PanelでApacheとMySQLを起動する。
+1. XAMPP Control PanelでApacheとMySQLを起動する。（XAMPPはポート80を使うため，Skypeと競合する。うまく起動しない場合は，XAMPP Control PanelからNetstatを起動し，ポートの競合を確認する。）
 1. http://localhost/ にアクセスしてApacheの動作を確認する。
 
 HTMLファイルは簡単なものをテキストエディタで作ればよい。
 
-各sampleは別フォルダにある。
+## sample1を試す
 
 ## 第1週のチェック項目
 
@@ -36,6 +35,9 @@ HTMLファイルは簡単なものをテキストエディタで作ればよい�
 1. （オプショナル）http://localhost/member/search.php?name=%E5%A4%A7
 1. （オプショナル）http://localhost/member/search.php?id=1&name=%E5%A4%A7
 1. （オプショナル）http://localhost/member/search.php?id=3&name=%E5%A4%A7
+
+## sample2を試す
+
 
 ## 後片付け
 

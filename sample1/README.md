@@ -101,23 +101,41 @@ http://localhost/member/name.php?bar=%E5%A4%A7
 
 ### データベースとテーブルの作成
 
+#### 作業1
+
+補完すべき項目を決める。
+
+- ID
+- 氏名
+
+#### 作業2
+
+サンプルデータを作る。
+
+|ID |氏名|
+|:--|:---|
+|1  |岩瀬|
+|2  |岩橋|
+|3  |大木|
+|4  |小山|
+
+#### 作業3
+
+テーブルを設計する
+
+|名前|型|その他|
+|:---|:----------|:-----|
+|id  |整数 int|主キー|
+|name|50文字までの文字列 varchar(50)||
+
+idやnameは勝手に付けた名前。
+
 http://localhost/phpmyadmin/ で「SQL」をクリックして`sample1.sql`を実行する。（GUIで作業することもできるが，このようにSQLのコードを書いた方がいろいろ便利。）
-
-データを入力する。
-
-```
-insert into members (id, name) values (1, '岩瀬');
-insert into members (id, name) values (2, '岩橋');
-insert into members (id, name) values (3, '大木');
-insert into members (id, name) values (4, '小山');
-```
 
 ##### 課題
 
 * GUIでデータを確認し，そのときに実行されたSQL文を確認する。
 * GUIでデータを追加し，そのときに実行されたSQL文を確認する。
-
-
 
 ### 課題（余裕のある人向け）
 
