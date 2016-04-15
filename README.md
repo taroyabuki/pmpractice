@@ -41,6 +41,18 @@ HTMLファイルは簡単なものをテキストエディタで作ればよい�
 
 ## sample2を試す
 
+## sample3を試す
+
+## 第2週のチェック項目
+
+1. http://localhost/member/all2.php
+1. http://localhost/member/insert.html
+1. http://localhost/member/update.html
+1. http://localhost/member/all3.php
+1. （オプショナル）研究室名簿の項目を増やす。
+1. （オプショナル）研究室名簿の更新フォームを作る。
+
+## （オプショナル）sample4を試す
 
 ## 後片付け
 
