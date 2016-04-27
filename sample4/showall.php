@@ -34,14 +34,6 @@
         # エラーが発生した場合、PDOException例外がスローされるのでキャッチします。
         echo 'エラーが発生しました。内容: ' . h($e->getMessage());
       }
-
-      function h($var) {  // HTMLでのエスケープ処理をする関数
-        if (is_array($var)) {
-          return array_map('h', $var);
-        } else {
-          return htmlspecialchars($var, ENT_QUOTES, 'UTF-8');
-        }
-      }
       ?>
     </div>
   </body>
