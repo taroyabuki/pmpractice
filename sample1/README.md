@@ -350,3 +350,5 @@ $prepare->bindValue(':name', '%'.$name.'%', PDO::PARAM_STR);
 ### 課題（余裕のある人向け）
 
 HTTPステータスコードを調べ，結果が無いときに，それを表すコードを返すようにする。
+
+## [sample2](../sample2/)に進む
