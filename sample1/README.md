@@ -343,9 +343,9 @@ $prepare->bindValue(':name', '%'.$name.'%', PDO::PARAM_STR);
 
 * http://localhost/member/search.php （すべて表示）
 * http://localhost/member/search.php?id=1
-* http://localhost/member/search.php?name=%E5%A4%A7
-* http://localhost/member/search.php?id=1&name=%E5%A4%A7（結果無し）
-* http://localhost/member/search.php?id=3&name=%E5%A4%A7
+* http://localhost/member/search.php?name=大
+* http://localhost/member/search.php?id=1&name=大 （結果無し）
+* http://localhost/member/search.php?id=3&name=大
 
 ### 課題（余裕のある人向け）
 
