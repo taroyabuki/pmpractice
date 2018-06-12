@@ -22,7 +22,7 @@ $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 //結果の出力
 foreach ($result as $person) {
   echo $person['id'];
-  echo ' ';
+  echo ',';
   echo $person['name'];//手抜き
   echo "<br/>";
 }

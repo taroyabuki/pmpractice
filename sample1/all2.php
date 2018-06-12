@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title></title>
+    <style>
+    table {border-collapse: collapse;}
+    th, td {border: solid black 1px;}
+    </style>
+  </head>
+  <body>
 <?php
 //データベース接続設定
 $dbServer = '127.0.0.1';
@@ -20,7 +31,10 @@ echo '<table>';
 echo '<tr><th>ID</th><th>Name</th>';
 foreach ($result as $person) {
   $id = $person['id'];
-  $name = $person['name'];
-  echo "<tr><td>$id</td><td>$name</td></tr>";//手抜き
+  $name = $person['name'];//手抜き
+  echo "<tr><td>$id</td><td>$name</td></tr>";
 }
 echo '</table>';
+?>
+  </body>
+</html>

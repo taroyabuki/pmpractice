@@ -10,15 +10,15 @@ $dbPass = 'pass';
 $db = new PDO($dsn, $dbUser, $dbPass);
 
 //検索実行
-$sql = 'SELECT * FROM members';
+$sql = 'SELECT id, name FROM members';
 $prepare = $db->prepare($sql);
 $prepare->execute();
 $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
 //結果の出力
-foreach ($result as $person) {
-  echo $person['id'];
-  echo ' ';
-  echo $person['name'];//手抜き
-  echo "<br/>";
+foreach ($result as $person) {//1件ずつ，$personという仮の名前で取り出す
+  echo $person['id'];//idを読む
+  echo ',';
+  echo $person['name'];//nameを読む
+  echo "<br/>";//改行
 }

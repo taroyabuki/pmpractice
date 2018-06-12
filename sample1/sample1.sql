@@ -1,20 +1,23 @@
 -- データベースsample1の作成
-drop database if exists sample1;
-create database sample1 charset=utf8;
+drop database if exists sample1;-- データベースがすでにあるなら削除
+create database sample1 charset = utf8mb4;
 
 -- アクセス権限の設定
+-- sample1のすべて（*）のテーブルに関する
+-- すべて（all）の操作権限を
+-- test@localhost（パスワードはpass）に与える。
 grant all on sample1.* to test@localhost identified by 'pass';
 
--- データベースを使う
+-- データベースの利用
 use sample1;
 
 -- テーブルmembersの作成
 create table members (
-  id int primary key,-- idは整数で主キー
-  name varchar(50)   -- nameは文字列（最大50文字）
+  id int primary key,
+  name varchar(50)
 );
 
--- データの追加
+-- サンプルデータの追加
 insert into members (id, name) values (1, '岩瀬');
 insert into members (id, name) values (2, '岩橋');
 insert into members (id, name) values (3, '大木');
