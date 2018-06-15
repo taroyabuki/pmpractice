@@ -161,13 +161,13 @@ http://localhost/member/name.php?bar=大
 
 以上をSQLで書くと[sample1.sql](sample1.sql)のようになる。（データベース`sample1`がすでにある場合は最初に削除するようにしているから，このSQLを実行すれば，データベースを手軽に初期状態に戻せる。phpMyAdminでGUIで作業することもできるが，このようにSQL文を書いておいた方が，再現性が保ててよい。）
 
-SQL文は，http://localhost/phpmyadmin/ で「SQL」をクリックし，テキストボックスに貼り付けて実行できる。しかし，この方法は面倒だから，コマンドプロンプト（またはPowerShell）で`c:/xampp/mysql/bin/mysql -uroot`としてMySQLに接続し，そこに入力（または貼り付け）して実行した方がいい。
+SQL文は，http://localhost/phpmyadmin/ で「SQL」をクリックし，テキストボックスに貼り付けて実行できる。しかし，この方法は面倒だから，コマンドプロンプトまたはPowerShellで`c:/xampp/mysql/bin/mysql -uroot`としてMySQLに接続し，そこに入力（または貼り付け）して実行した方がいい。
 
 ### API No. 1
 
 #### SQL
 
-**（PHPを書く前に）** 全メンバを取得するSQL文を書いてみる。
+**（PHPを書く前に）** 全メンバを取得するSQL文を書いてみる。（コマンドプロンプトまたはPowerShellで`c:/xampp/mysql/bin/mysql -uroot sample1`としてMySQLに接続して試す。）
 
 ```sql
 -- データベースの利用
@@ -252,7 +252,7 @@ all.phpを上記のように修正したのが[all2.php](all2.php)である。�
 
 #### SQL
 
-**（PHPを書く前に）** 名前の一部を指定してメンバを取得するSQL文を書いてみる。
+**（PHPを書く前に）** 名前の一部を指定してメンバを取得するSQL文を書いてみる。（コマンドプロンプトまたはPowerShellで`c:/xampp/mysql/bin/mysql -uroot sample1`としてMySQLに接続して試す。）
 
 ```sql
 -- データベースの利用
@@ -270,7 +270,7 @@ API No. 1との違いは，SQLの「`id = 2`」の部分が実行時に決まる
 $id = $_GET['foo'];
 ```
 
-SQLは次のように記述する。後で決まる部分は「`:id`」のように書いておく。
+PHPから実行するSQLを，次のように記述する。後で決まる部分は「`:id`」のように書いておく。
 
 ```php
 $sql = 'SELECT * FROM members WHERE id = :id';
@@ -293,7 +293,7 @@ $prepare->bindValue(':id', $id, PDO::PARAM_INT);
 
 #### SQL
 
-**（PHPを書く前に）** IDを指定してメンバを取得するSQL文を書いてみる。（`%`は任意の文字列のこと。空文字列にもマッチする。）
+**（PHPを書く前に）** IDを指定してメンバを取得するSQL文を書いてみる（`%`は任意の文字列のこと。空文字列にもマッチする）。（コマンドプロンプトまたはPowerShellで`c:/xampp/mysql/bin/mysql -uroot sample1`としてMySQLに接続して試す。）
 
 ```sql
 -- データベースの利用
@@ -311,7 +311,7 @@ SQLの一部が実行時に決まるという点で，API No. 2とほとんど�
 $name = $_GET['bar'];
 ```
 
-SQLは次のように記述する。後で決まる部分は「`:id`」のように書いておく。
+PHPから実行するSQLを，次のように記述する。後で決まる部分は「`:id`」のように書いておく。
 
 ```php
 $sql = 'SELECT * FROM members WHERE name LIKE :name';
@@ -324,7 +324,7 @@ $prepare = $db->prepare($sql);
 $prepare->bindValue(':name', '%'.$name.'%', PDO::PARAM_STR);
 ```
 
-ほかはid.phpと同じである。
+ほかは[id.php](id.php)と同じである。
 
 #### 動作確認
 

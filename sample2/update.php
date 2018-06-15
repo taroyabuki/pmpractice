@@ -10,8 +10,8 @@ $dbPass = 'pass';
 $db = new PDO($dsn, $dbUser, $dbPass);
 
 //送信データの取得
-$id = $_POST['id'];//手抜き
-$name = $_POST['name'];//手抜き
+$id = $_POST['id'];
+$name = $_POST['name'];
 
 //検索実行（エラーチェックを省略している）
 $sql = 'UPDATE members SET name=:name WHERE id=:id';
