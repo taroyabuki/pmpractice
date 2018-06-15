@@ -72,3 +72,5 @@ UPDATE members SET name='山田' WHERE id=4;
 ```
 
 あとは「追加」と同じ。[update.php](update.php)と[update.html](update.html)を参照。
+
+## [sample3](../sample3/)に進む
