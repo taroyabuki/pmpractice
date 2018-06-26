@@ -11,7 +11,7 @@
 1. Apache（ウェブサーバ）とMySQL（データベースサーバ），PHP（サーバ言語），phpMyAdmin（データベース操作ツール）を入れる。（他は入れなくてよい。）
 1. XAMPP Control PanelでApacheとMySQLを起動する。（うまく行かない場合，Control PanelのNetstatでポート80を使っているプログラムを確認する。Skypeは完全に終了させる。）
 1. http://localhost/ にアクセスして，Apacheが動作していることを確認する。
-1. テキストエディタで`c:/xampp/htdocs/test.html`を作り，http://localhost/test,html でアクセスできることを確認する。`test.html`の内容はなんでもよい。
+1. テキストエディタで`c:/xampp/htdocs/test.html`を作り，http://localhost/test.html でアクセスできることを確認する。`test.html`の内容はなんでもよい。`c:/xampp/htdocs`がいわゆる**ドキュメントルート**であり、ここに置いたファイルがウェブサーバで公開される。
 
 ## 本番
 
