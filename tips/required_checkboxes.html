@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>選択必須のチェックボックス</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<p>少なくとも一つは選ばなければならないチェックボックスを作る。これを直接実現するHTMLの標準機能は（おそらく）ない。</p>
+<h2>form</h2>
+<form action="http://www.example.com" method="GET">
+    <h3>グループ1（少なくとも一つ選択）</h3>
+    <div class="group1">
+        <input type="checkbox" name="type1[]" value="A" required /> A<!--最初はすべて必須-->
+        <input type="checkbox" name="type1[]" value="B" required /> B
+        <input type="checkbox" name="type1[]" value="C" required /> C
+    </div>
+    <h3>グループ2（少なくとも一つ選択）</h3>
+    <div class="group2">
+            <input type="checkbox" name="type2[]" value="X" required /> X
+            <input type="checkbox" name="type2[]" value="Y" required /> Y
+            <input type="checkbox" name="type2[]" value="Z" required /> Z
+    </div>
+    <input type="submit">
+    </form>
+<script>
+$(function() {//jQueryを使う。
+
+   //グループ1の処理 
+    var requiredCheckboxes1 = $('.group1 :checkbox[required]');//グループ1の必須要素の取得
+    requiredCheckboxes1.change(function(){//チェックボックスが変更されたときの処理の設定
+        console.log('group1 changed');//（ブラウザのデベロッパーツールのConsoleで確認できる。）
+        if (requiredCheckboxes1.is(':checked')) {
+            requiredCheckboxes1.removeAttr('required');//チェックされていたら「必須」を外す
+        } else {
+            requiredCheckboxes1.attr('required', 'required');//チェックされていなければ「必須」にする
+        }
+    });
+
+   //グループ2の処理 
+   var requiredCheckboxes2 = $('.group2 :checkbox[required]');
+    requiredCheckboxes2.change(function(){
+        console.log('group2 changed');
+        if (requiredCheckboxes2.is(':checked')) {
+            requiredCheckboxes2.removeAttr('required');
+        } else {
+            requiredCheckboxes2.attr('required', 'required');
+        }
+    });
+});
+</script>
+</body>
+</html>
